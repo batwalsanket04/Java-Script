@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- declarator:
+     
+     -thus are the keyword which specify the scope of any variable.
+     -scope is the area the variable should be applicated.
+     -if the scope is improperly defined then the variable get access to the other part of code it can couse issues.
+
+      there are three type of declarator in js:
+
+      1.var:- this is declarator from older js.
+            -this  is global scope declarator.
+            it can  be redeclared and reassigned.
+
+      2. let: it is feature from ES6 (2015)
+            -it is block scope declarator
+            -this is not allows to redeclare but it allows to re-assign.
+
+      3. const: -feature of modern js (ES6)
+                -it is also used for ctreating a block scope declaretor
+                -
+       
+
+
+
+
+    lifecyle phase of variable :
+    1.declare:- in this phase we only create a container/variable having declarator and identifire
+
+    2.intialize:- in this phase wa actuallly store the some data into the container/variable
+    
+    3.use:- then we actually perform the working on this like display, processing.
+    
+    -->
+
+
+
+
+
+      <script>
+        //    this is the concept of var
+        var  num=10;
+        console.log(num);
+
+        if(true){
+            var num=100;
+            console.log(num);
+        }
+
+
+        var num; //declare
+        var num=100;// initialize
+
+        var num;// re declare
+        var num=20;// re assign
+
+
+
+        // this is the concept of let()
+
+        // let num=100;
+        // console.log(num);//100
+
+        // if (true){
+        //     let num=200; // only usable for this blockk of code
+        //     console.log(num);//200
+        // }
+        // console.log(num)//100
+
+        let n1;
+        n1=100;
+        consol.log(n1);
+
+        let n1;// not allowed
+
+        n1=200;// allows 
+
+
+        // this is the concept of const()
+
+        const n1=20;
+        console.log(n1);
+
+        if (true){
+             const n1=40;// it is scope level that why it is not accesible outside the block. 
+             console.log(n1);//40 
+        }
+        console.log(n1);// 20 
+
+
+        const num1=100; // it needs to be initialize at time of delaration only
+
+        num1=150;
+        console.log(num1);
+
+        num=150;
+        console.log(num1)//gives the error on console
+
+
+
+
+
+
+      </script>
+    
+</body>
+</html>

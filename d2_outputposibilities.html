@@ -1,0 +1,63 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+   
+ </script>
+ </head>
+ <body>
+
+    <h1 id="result"></h1>
+    <button >change result</button>
+
+
+
+    <h1 id="result">This Is a Original Content</h1>
+    <button onclick="changerRes"></button>
+    <!-- inline css using Alert Way -->
+
+    <button onclick="greet()">CLICK ME</button>
+    <script>
+        function greet(){
+            alert("Hello, from Inline css");
+        }
+
+        //  displyed using alert
+
+        alert("hello, this is  displayed using the  alert method")
+
+        //displyed using document.write
+
+        document.write("hello guys this is displyed using document.write");
+        document.write("<h1>Hello world...</h1>" );
+
+
+        function changerRes(){
+            Document.getElementByID("result").innerHTML="this is the <mark> modified content</<mark>";
+
+        }
+    </script>
+  
+
+   <!-- inline css using the method  document.write() -->
+    <h3>click Button Below ti use document.write()</h3>
+    <button onclick="document.write('hello from Inline js using document.write.')">CLICK ME</button>
+
+
+    <!-- inline css using document.write way (2) -->
+
+    <!-- <h3>inline css using innerHTML</h3> -->
+     
+      
+    <h1 id="demo"></h1>
+<button onclick="document.write('<h1 style=\'color:blue;\'>Hello from .InnerHTML()</h1>')">Write Text</button>
+
+
+ 
+  
+    
+ </body>
+ </html>
