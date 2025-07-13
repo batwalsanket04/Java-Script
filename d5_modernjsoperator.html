@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+     <!-- Modern js Operator
+
+     1.typeof:-this operator help us to find the datatype of the variable.   
+      
+       syntax:
+                console.log(typeof variable name);
+     
+     2.nullish coelscheing:-it provides some defoult value for the variable.
+
+     3:ternary operatory:-this operator reduced the effort for writiing if ,else block.
+      syntax:
+
+        (condition? " statement":" statement");
+
+     4.exponential operator:- this operator is use to raise a number to the powr of the other number
+      
+       number**numer;
+
+
+     5.concatination operator:-
+
+     syntax:
+             "string"+"string";
+             "string"+operator;
+              "string"+ declared variable -->
+
+
+
+  <script>
+
+    //typeof operator
+
+    let num1=true;
+    console.log(typeof num1);
+
+
+    num1=200;
+    console.log(typeof num1);
+
+    let num='A';
+    console.log(typeof num);
+
+  console.log("*******************************");
+
+
+  let YourName="Vishal";
+
+  console.log("hello "  + YourName + " Good Morning " );
+
+  let yourname;  // it provide sthe defoult value as output.
+  console.log("hello " + (yourname ?? "friend") + " ! good morning !" );
+
+ let n=100;
+
+//  if(n%2==0)
+//  {
+//     console.log("no is even ");
+
+//  }
+//  else
+//  {
+//     console.log("no is odd");
+//  }
+
+console.log((n%2==0)? " No Is even":" no is odd");
+
+console.log((n===10)? "the number is 10":" the no is not 10");
+
+
+console.log(6*6*6);
+console.log(6**3);
+
+
+console.log("sanket"+" Batwal");
+console.log("10"+5);
+
+ myname="sanket";
+
+console.log("heyy " + myname + "!");
+
+</script>
+    
+</body>
+</html>
