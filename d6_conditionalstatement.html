@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+     <!-- conditional statements
+     -statement of the code which gives the controll over the execution of the code are called statement.
+
+     -these are the two types controll statement 
+      1.conditional statement:-
+
+          1.if/else
+          2.else if
+          3.switch
+
+      2.iterative loop:
+
+       1.for loop
+       2.while loop
+       3.do_while loop
+
+ -->
+
+     
+
+    
+    <script>
+
+
+   /// if codition
+     
+     let age= +prompt("enter your age ");
+
+     if(age>=18)
+     {
+       console.log(` you are ${age} year old. your are eligible for voting`);
+
+     }
+     else{
+        console.log(` your not eligible for vaiting`);
+
+
+     }
+
+
+
+     // elseif condition
+
+     let clr= +prompt("1.red\n 2.green\n 3.red");
+
+     if(clr==1)
+     {
+        console.log("you have selected red Color");
+
+     }
+     else if(clr==2)
+     {
+         console.log("you have selected green color");
+
+     }
+     else if(clr==3)
+     {
+         console.log("you have selected blue color");
+         
+     }
+
+
+
+   //  Switch /case  condition
+
+     
+
+     let a= +prompt("Enter The value of a");
+     let b= +prompt("Enter The value of b");
+     let c=0;
+
+     let ch= +prompt("1.addition\n 2.substraction\n 3.Multiplication\n 4.Division");
+
+
+     switch(ch){
+
+        case 1:{
+
+            c=a+b;
+            console.log("Additon Of A, B is "+c);
+            break;
+        }
+        case 2:{
+            c=a-b;
+            console.log("Substraction is:"+c);
+            break;
+
+        }
+        case 3:{
+            c=a*b;
+            console.log("multiplication is:"+c);
+            break;
+
+
+        }
+        case 4:{
+            c=a/b;
+            console.log("Division Is:"+c);
+            break;
+
+        }
+        default:("Incorrect choice");
+     }
+
+
+
+  
+
+
+    </script>
+</body>
+</html>
