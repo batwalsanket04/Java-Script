@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  return keyword
+
+
+  <!-- when we calculate any value inside a function,it stay valid only until the function is being called
+  the moment function call ends,the value inside the function lose thier existanxce.
+  If we want  to use any value from inside the function on the outside ,we wont bt able to do that .
+  for this ,return keyword is usefull.
+  using return keyword ,we can send a value from within the function to the outside of function.
+  this value can be stored in variable or displyed directly.
+  using this return keyword we can use ouur function to calculate value and use them anywhere as per the requirements.
+
+  the function executed stops where return keyword is used.
+  for this ,always make sure to use return keyword at the end of the function.
+   -->
+
+    <script>
+     function add(){
+        var sum=30+5;
+        //console.log(sum);
+      return sum;//always keep at the end of function or code.
+      console.log("this is printed after return keyword.");// will not show becouse of our code is stop in your return keytword.our exectution will happan of that keyword always.
+     }
+     //add();
+     console.log(add());//will get output.
+    // console.log(sum);//output will not show
+
+
+     let addition=add();
+     console.log("the addtion is "+addtion);
+    </script>
+    
+</body>
+</html>
