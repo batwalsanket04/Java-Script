@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Nested Function
+
+    -this are the function which are declared within a main function and are used only within that function.
+    such function are mostly made up of logic which is limited to that perticular main function itself.
+ -->
+
+
+    <script>
+     function outerfun(){
+        console.log("this is the outer function");
+
+        function innerfun(){
+            
+            console.log("this is  inner function");
+ 
+        }
+        //innerfun();
+        return innerfun();
+     }
+     let nested = outerfun();
+     //innerfun();//its allow for calling bacouse we store that in another variable.m
+ 
+    // outerfun()
+    // innerfun();//its not allow to calll outside the function becouse of which function we are calling that is block level onlyy.
+
+
+    </script>
+</body>
+</html>

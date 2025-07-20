@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- callback function
+
+    -It is the function is passed as an argument to another function.
+    - this is callback function is executed inside the main function and its output is then used in the main function.
+
+   -it is type of asynchronous behaviour. -->
+
+    
+</body>
+
+<script>
+
+//collback function
+
+    function average(n1,n2,n3,n4,n5,callback)
+    {
+        let sum=(n1+n2+n3+n4+n5);
+        let avg=sum/5;
+
+        console.log(` this is the ${avg}`);
+
+    }
+    function vard(callback){
+        console.log("heyy")
+    }
+    function sanket(){
+        console.log("mayur")
+    }
+
+    average(10,12,31,42,21,vard());
+
+
+//callback function
+
+    function greet(name, callback) {
+    console.log("Hi " + name);
+    callback(); // Call the callback function
+    }
+
+function sayGoodbye() {
+    console.log("Goodbye!");
+}
+
+greet("Sanket", sayGoodbye);
+
+</script>
+</html>
