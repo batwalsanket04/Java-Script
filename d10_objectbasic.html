@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Object:
+          -it is one of the most fundamental concept in jS.
+          Object are the entities which sre used to store very large amount of data.
+          they have no limitation on the data storage i.e we can store any amount and kind of data in them.
+          the data store within an object is individually indentified by refering to its 'key'
+          this called as key indexing.
+
+
+    way to create Object 
+
+    1.literal method:-
+                    -we simply create a variable and store an object in the variable.
+                    -this method is useful to create the standalone Object.
+
+    2.instance method ( can be used for other datatype as well):-
+                      -This method is use to create an object using "new " keyword and then store the data in the object.
+                      -This method can be used on other datatypes as well as create their object.
+
+    3.constructor method:-
+                       -in this we use a constructor to create multiple objects of similar type.
+                       constructore is a special type of function which is used to initialize value to an objects
+                     -this constructor is useful when we want to create multiple instances of same object type.
+
+
+
+
+     -->
+
+
+    <script>
+     //literal method
+
+     let obj1={
+        id:101,
+        name:"mayur",
+        role:"student",
+        phone:7507357238,
+        isGraduated:true,
+        skills:["HTML","CSS","Bootstrap","javasript"],
+        laptopDetails:{
+            make:"asus",
+            model:"ROG",
+            ram:"12gb",
+            Storage:"1tb",
+        },
+
+        };
+        console.log(obj1);
+
+
+        //instance Method.
+
+        let obj2 = new Object();
+
+        obj2.id=102;
+        obj2.name="sanket";
+        obj2.role="frontend developer";
+        obj2.phone=3523525265;
+
+        console.log(obj2);
+
+
+
+        let num1=50;
+        console.log(`${num1} is a ${typeof num1}`);
+
+        num1=new Number(60);// when we use new keyword during varible declaration its would be the "object".
+        console.log(`${num1} is a ${typeof num1}`);//object
+
+        let str="abc";
+        console.log(`${str} is a ${typeof str}`);
+
+        str=new String("javascript");
+        console.log(`${str} is a ${typeof  str}`);//object
+
+        let bool1=true;
+        console.log(`${bool1} is a ${typeof bool1}`);
+
+        bool1=new Boolean(false);
+        console.log(`${bool1} is a ${typeof bool1}`);//object
+
+
+
+//constructor method
+
+
+function student(roll,nm,sage,sphone){
+    this.rno=roll;//this keyword refers to the currunt object.
+    this.name=nm;
+    this.age=sage;
+    this.phone=sphone;
+
+}
+let std1=new student(21,"sanket",23,7075032005);
+
+console.log(std1);
+
+ let std2=new student(22,"mayur",22,9855343423);
+console.log(std2);
+
+
+
+
+     
+
+
+    </script>
+
+    
+    
+</body>
+</html>

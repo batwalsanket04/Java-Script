@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!-- Methods
+
+    these are the functions in which are stored within an object and use the 
+    data in the object to generate some output.
+
+
+    Proper defination of Object:-
+               -the object are entities made up of properties and methods which are used to store large amount of data in form of key and value pairs.
+        
+    Properties:-the data stored in the object is called property
+    e.g name:"rutvij" -->
+
+          <script>
+
+        let std1={
+            rno:101,
+            name:"arnav",
+            age:21,
+            phone:8709990899,
+        
+            votingEligibility:function(){
+                if(this.age>=18){//helps to passed value store into currunt value.
+
+                    console.log(`${this.name} can vote!`);
+
+                }else{
+                    console.log(`${this.name} cannot vote!`);
+
+                }
+            },
+        };
+        console.log(std1);
+
+        sdt1.votingEligibility();
+
+        
+
+    </script>
+    
+</body>
+</html>

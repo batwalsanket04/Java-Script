@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <script>
+      let myObj1={
+        name:"rutvij",
+        role:"trainer",
+        phone:8477658992,
+        email:"batwalsanket@gmail.com",
+        location:"satara",
+        bikeDetail:{
+            make:"bajaj",
+            modal:"pulserNs160",
+            engine:"160CC",
+
+        },
+    };
+
+    console.log(myObj1);
+
+    // //key referancing
+    //  -this is use when we directly want to access the key from any object.
+    //  -in this, the key is refered using the '.'
+
+    myobj1.location="pune";
+    console.log(myObj1);
+
+
+
+    let userkey=prompt("enter the data you want to change");//location
+    let newdata=prompt("Enter the updated value");
+
+    //variable referancing
+
+    // This is used when we have the name of key stores in a variable and we need to
+    //  use that variable to access the object key.
+    // for This ,we write the variable in '[Var_name]' to find the key within the object.
+
+    myObj1[userkey]=newdata;
+    console.log(myobj1);
+
+console.log("******************************************************");
+
+//Reading The objects
+
+//document.write(myObj1); //This Is give Wrogn output.
+
+document.write(`name: ${myObj1.name}` );
+document.write(`role: ${myObj1.role}`);
+document.write(`phone: ${myObj1.phone}`);
+document.write(`email: ${myObj1.email}`);
+document.write(`location: ${myObj1.location}`);
+
+
+
+//iterating the object using for in loop
+
+
+for(let keys in myObj1){
+    document.write(`<h2>${keys}:${myObj1[keys]}</h2>`);
+
+}
+
+for(let keys in myObj1.bikeDetail){
+    document.write(`<h2>${keys}:${myObj1.bikeDetails[keys]}</h2>`);
+
+}
+
+
+  </script>
+    
+</body>
+</html>
