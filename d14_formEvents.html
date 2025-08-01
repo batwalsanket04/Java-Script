@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #label1 {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+    
+    Form Events
+
+    Form is used to collet the data from user using input tags and submit the 
+    data to the backend for further processing
+
+
+    1. onfocus: Focussing means clicking on the input field. The onfocus event occurs 
+                when we focus onto any input field.
+
+    2. onblur: This event occurs when we click out from anyu input field and de-select it.
+
+    3. onchange: This event occurs when the data in the input field has been changed.
+
+    4. onselect: This event occurs when the data in the input field gets selected.
+
+    5. onsubmit: This event occurs when the form is getting submitted.
+
+
+
+    
+    IQ: What is the difference between <input type="submit"/> and onsubmit?
+    
+    -->
+
+    <form onsubmit="confirm('Are you sure?')">
+      <label for="" id="label1">Enter your name</label>
+      <input
+        type="text"
+        id="nameIp"
+        name="fname"
+        onfocus="displayLabel()"
+        onblur="hideLabel()"
+        onchange="showName()"
+        onselect="console.log('The data in the input field has been selected')"
+      />
+
+      <br />
+
+      <input type="submit" />
+    </form>
+    <hr />
+    <h1 id="msg">Hello</h1>
+    <script>
+      function displayLabel() {
+        document.getElementById("label1").style.display = "inline";
+      }
+
+      function hideLabel() {
+        document.getElementById("label1").style.display = "none";
+      }
+
+      function showName() {
+        let nm = document.getElementById("nameIp");
+        document.getElementById("msg").innerHTML = `Hello ${nm.value}`;
+      }
+    </script>
+  </body>
+</html>

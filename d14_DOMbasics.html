@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- DOM
+
+    DOM stands for document object model.
+    our browser interprete the HTMl code in the from of tree data structure.
+    In JS ,we cannot work with this data structure.
+    for that ,the HTML code is represent in form of JS object and it is called as DOM.
+
+    using this Dom we can access and modify the HTML element through JS code.
+
+    the DOM represent by 'document' keyword in Js.
+
+    method Of aceess HTML element
+
+    1.getElementById: returns the perticular element having  the given Id.
+
+    2.getElementsByClassName:it returns the collection of element having the given class.
+    
+    3.getElementsByTagName:It returns the collection of elemenent having the given tag are in the document.
+
+    4.getElementByName:it return the collection of all element having the given name.
+
+ ------------------------------------------------------------------------------------------------
+
+ 1.querySelector:-( #id,.class Tagname,name):This method gives us the flexibility  to access any element of any selector  typ[e but it returns  only the first element of that given 'id','class',tag, name.
+
+ 2.querySelectorAll(#id,.class,tag,name)://This method gives us the flexibility to access any element of any selector type but it returns all the elements of that given 'id','class',tag, name.
+ -->
+
+
+
+
+    <div id="d1">
+
+        <p class="article1">
+            <h1>this is simple heading</h1>
+
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non officiis iste suscipit iusto, officia aspernatur cupiditate sequi ipsam, recusandae amet voluptates voluptatibus omnis sit tempora quis quaerat vel nobis? Obcaecati accusamus, necessitatibus molestiae repellendus reprehenderit quaerat omnis ipsa quos dolor aperiam voluptatibus quasi rerum ipsum quae sapiente, eius placeat vel dolore deserunt voluptates quis vero repudiandae commodi odio. Vitae eius, ipsa earum esse incidunt, fugit, quam nemo nihil magni ratione fuga! Voluptates quidem commodi rerum placeat, est inventore, maiores esse saepe facere officia enim explicabo laudantium illum harum aperiam blanditiis unde dolorem ratione porro. Quibusdam quos temporibus sed? Illo modi impedit dolor reprehenderit, labore optio doloremque rerum suscipit! Ab rerum possimus maiores omnis! Voluptatibus, iusto! Accusamus quam harum aspernatur hic dolorum, ipsam provident eius consectetur laborum ea fugiat magni quod aliquid numquam eaque voluptas autem pariatur blanditiis temporibus! Iusto nemo, dolorem voluptas ipsum consequatur ad iste dolorum aspernatur praesentium consequuntur voluptatem mollitia debitis rerum, magnam quo reprehenderit eos deserunt, quidem pariatur. Dolor, reiciendis repellendus temporibus quisquam sapiente quas atque possimus cum, error corrupti culpa aperiam quis recusandae. Similique, iste qui excepturi quos perspiciatis optio at officia ipsam blanditiis, eius eos deleniti numquam quisquam recusandae dignissimos eum, impedit dolores quod nihil!
+
+        </p>
+
+        
+    </div>
+
+    <div id="d2">
+        <p class="article2">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae commodi nihil esse. Doloribus vitae similique totam quia labore iste dolores corrupti exercitationem esse reprehenderit, minima alias cupiditate laborum vel inventore expedita velit dolorum, provident dolorem, corporis deserunt! Iste ab et at! Cupiditate aut dolorem tempora, hic tenetur officia doloremque labore aliquam perspiciatis quis libero culpa laboriosam adipisci officiis nesciunt aliquid. Cum fugit ducimus incidunt, earum fugiat dicta explicabo. Ab fugiat aut vitae reprehenderit quibusdam. Totam mollitia dolorem, eius corporis recusandae praesentium distinctio quae nihil? Ab, accusamus officiis provident facilis delectus impedit fugiat odio quos sit, reprehenderit velit sequi repellat dignissimos! At magni blanditiis ad architecto in optio cumque ea necessitatibus quos rerum commodi atque saepe porro autem, suscipit dolorum alias neque eveniet. Commodi ea ullam accusantium, esse sequi aliquid quis molestiae alias dignissimos non recusandae deleniti? Modi reprehenderit aut, aliquid cum facilis temporibus quod, porro, repellendus vitae harum earum veritatis dolores repellat ab? Ea ut magni a labore, culpa illo dolores inventore ipsa rerum suscipit soluta reiciendis nobis quisquam, dignissimos saepe repudiandae cum deserunt quasi molestiae velit sunt delectus veniam! Dolore, iure at! Accusamus porro non a officia ipsum ut odio quibusdam eveniet, delectus id. Voluptas tempore obcaecati sapiente pariatur!
+
+        </p>
+    </div>
+
+    <script>
+        console.log(document);
+
+
+        //getElementById
+
+       console.log(document.getElementById("d1"));
+
+       //getElementsByClass Name
+
+
+       console.log(document.getElementsByClassName("article2"));
+
+      // getelementsbytagname
+
+      console.log(document.getElementsByTagName("p"));
+
+
+      console.log("***************************************");
+
+      //queryselector
+
+      console.log(document.querySelector('#article2'));//returns only the first 'h1' having '.article1'.
+
+
+      //queryselectorAll
+
+      console.log(document.querySelectorAll('#d1'));//it returns the all element of the '.article1'.
+      
+
+      
+      </script>
+    
+</body>
+</html>
