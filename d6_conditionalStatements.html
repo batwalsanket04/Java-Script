@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let age = +prompt("Enter your age");
+
+      //   if (age >= 18) {
+      //     console.log(`You are ${age} years old. You are eligible for voting!`);
+      //   } else {
+      //     console.log(`Your age is ${age}. You cannot vote.`);
+      //   }
+
+      //   let marks = +prompt("Enter your marks");
+
+      //   if (marks >= 80) {
+      //     console.log("A Grade");
+      //   } else if (marks >= 60 && marks < 80) {
+      //     console.log("B Grade");
+      //   } else if (marks >= 40 && marks < 60) {
+      //     console.log("C Grade");
+      //   } else {
+      //     console.log("D Grade");
+      //   }
+
+      let clr = +prompt("Select a color\n1. Red\n2. Green\n3. Blue");
+      //   if (clr == 1) {
+      //     console.log("You have selected Red color");
+      //   } else if (clr == 2) {
+      //     console.log("You have selected Green color");
+      //   } else if (clr == 3) {
+      //     console.log("You have selected Blue color");
+      //   } else {
+      //     console.log("Your selection is invalid");
+      //   }
+
+      switch (clr) {
+        case 1:
+          console.log("You have selected Red color");
+          document.body.style.backgroundColor = "red";
+          break;
+        case 2:
+          console.log("You have selected Green color");
+          document.body.style.backgroundColor = "green";
+          break;
+        case 3:
+          console.log("You have selected Blue color");
+          document.body.style.backgroundColor = "blue";
+          break;
+        default:
+          console.log("Please check your input and try again!");
+          break;
+      }
+    </script>
+  </body>
+</html>

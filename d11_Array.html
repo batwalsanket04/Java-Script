@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- array
+
+    It is collection of similar Dissimilar elements.
+    since Js is a Dynamically written lang.we do not need to specify the datatype for the array
+    dua to this we get freedom of storing any kind of dta in array.
+    The elements stored in the array are identified based on their position in the array.
+    This is called numeriacal Indexing.
+    The forst Index position start from 0 and the last index position is no. of elements.
+
+    the datatype Of an array is 'Object ' To check whether the variable contains an array, we use Array.isArray().
+
+
+
+    Ways To create an array
+
+    1.Literal Method
+
+    2.Instance Method 
+    
+    
+    
+    -->
+    
+</body>
+
+
+<Script>
+
+//Litaral Method
+
+    let Arr1=[1,"two",134,true,null,[11,12,30],Symbol("ABC"),
+     {id:101,name:"ABC"},
+    
+    ];
+
+    console.log(Arr1);
+
+
+//Instance Method
+
+    let Arr2 =new Array();
+
+    Arr2[0]="Sanket";
+    Arr2[1]="mayoor";
+    Arr2[2]="yash";
+    Arr2[3]="shubham";
+    Arr2[4]="vardh";
+
+    console.log(Arr2);
+    Arr2[1]="mayur";
+    console.log(Arr2);
+
+    document.write(Arr2);
+
+//Normal Array Printing
+
+    for(let val of Arr2)
+{
+    document.write(`<h2>${val}</h2>`)
+}
+
+
+// Reverse Array Printing
+
+for(let i=4;i>=0;i--)
+{
+    document.write(`<h2>${Arr2[i]}</h2>`)
+}
+
+</Script>
+</html>

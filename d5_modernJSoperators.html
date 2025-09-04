@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    
+    ModernJS operators
+
+
+    typeof: This operator helps us to find the datatype of the variable
+
+    nullish coelscheing: It provides some default value for the variable 
+                         to work properly. Otherwise the variable shows 'undefined' output.
+    Syntax:
+
+        var_name??"Default_value"
+
+    ternary operator: This reduces the efforts for writing the if-else block
+
+    Syntax:
+        condition ? [If the condition is true]  : [If the condition is false]
+
+    exponential operator: This operator is used to raise a number to the power of other number
+
+    Syntax:
+
+    number ** power
+
+    concatenation operator: It is given by '+' sign and it is used to join together string 
+                            or strings with variables.
+    
+    -->
+    <script>
+      let myVar = true;
+      console.log(myVar);
+      console.log(typeof myVar);
+      console.log("****************************");
+
+      let yourName;
+      console.log("Hello " + (yourName ?? "Friend") + "! Good morning!");
+      console.log("**************************");
+
+      let n1 = 15;
+
+      //   if (n1 === 10) {
+      //     console.log("The number is 10");
+      //   } else {
+      //     console.log("The number is not 10");
+      //   }
+
+      console.log(n1 === 10 ? "The number is 10" : "The number is not 10");
+
+      console.log("**************************");
+
+      //   console.log(6 * 6 * 6);
+      console.log(6 ** 3);
+      console.log(5 ** 2);
+      console.log(10 ** 4);
+
+      console.log("************************");
+
+      console.log("Java" + "Script");
+
+      console.log("Frontend " + "Developer");
+
+      yourName = "Sanket";
+      console.log("Hi " + yourName + " !");
+
+      console.log("*************************");
+
+      //String coersion
+      console.log(10 + 10); //20
+      console.log(10 + "5"); //105 because one value is number and other value is a string
+    </script>
+  </body>
+</html>

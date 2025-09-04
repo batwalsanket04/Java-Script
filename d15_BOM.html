@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        BOM
+
+        BOM stands for Browser Object Model
+        It returns the browser in form of a javascript object
+        Using this BOM we can work with our browser from the JS code.
+
+        The BOM is represented using the keyword 'window'
+        This is a global level object.
+        It is present in our code everytime even if we particularly don't write it.
+        Apart from 'window', 'this' is another global level object.
+
+
+        Dialog boxes in BOM:
+
+        1. alert
+
+        2. prompt
+
+        3. confirm
+
+
+        Objects in BOM:
+
+        1. history: It helps us to work with the history of the browser
+                    back(): Goes one page behind in history
+                    forward(): Goes one page ahead in the history
+                    go(no_of_pages): Goes given no of pages forward or behind in the history
+        2. location: It gives us information about different parts of URL
+
+        3. navigator: This gives us information about the browser and the user environment (our device)
+
+        4. screen: This returns all the information about the screen of the device.
+
+
+
+        BOM methods:
+
+        print(): It can print our webpage through JS code 
+        open(link, target, features): It helps us to open a new page using JS code for buttons
+        close(): This method helps us to close the pages which were opened using the open() method
+    -->
+
+    <button onclick="history.back()">Go Back</button>
+    <button onclick="history.forward()">Go Forward</button>
+    <button onclick="history.go(-2)">Go 2 Pages back</button>
+    <hr />
+    <button onclick="window.print()">Print Page</button>
+    <button
+      onclick="window.open('./d15_childPage.html', '_blank', 'width= 800, height= 600')"
+    >
+      Open Child Page
+    </button>
+
+    <script>
+      console.log(window);
+      //   window.alert("This is from alert");
+      //   alert("This is from alert");
+      //   window.prompt("How is your day going?");
+      //   prompt("How is your day going?");
+      //   window.confirm("Are you good?");
+      //   confirm("Are you good?");
+
+      console.log(window.history);
+      console.log(window.navigator);
+
+      console.log(window.screen);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Methods to Perform Mathematical Operator
+
+    1.min():This method returns the smallest number from given argument.
+            it deos not directly with collection.
+            to implement this and max() on collection we need to use Spread operator.
+
+
+    2.max():This method returns the largest value of an object,array.
+
+    3.floor():this method returns the off our decimal value ti the previous integer.
+
+    4.ceil():thie method returns the off our decimal number to the next integer.
+
+     5.round():
+
+    6.trunc():this method removes the decimal 
+
+
+
+    ********************************************************************
+
+    Spread Operator
+
+
+    
+</body>
+<script>
+
+console.log(Math);
+
+console.log(Math.min(39,53,53,64,67,775,75,74,36,23,554,));
+
+console.log(Math.max(74,643,74,6,4,6,36,7,3,74,1000));
+
+let Arr=[24,534,53,4,5,342,534,5,242,5324,3,542,];
+
+console.log(Math.min(...Arr));
+console.log(Math.max(...Arr));
+
+
+
+let arr3=["sanket","yash","mayur"];
+let arr2=[12,423,534,...arr3,63,];
+
+console.log(arr2.concat (arr3));
+
+console.log(arr2);
+
+//floor
+
+let num1=35.76;
+num1=35.12;
+num1=35.99;
+
+console.log(Math.floor(num1));//returns the approximate value 35
+
+let num2=61.35;
+num2=81.45;
+num2=75.60;
+console.log(Math.ceil(num2));// which value containes the greater than 50 after the point oit gives the next integer like 75.60 it returns the 76.
+
+let num3=61.35;
+num3=81.75;
+num3=65.5;
+
+console.log(Math.round(num3));//66
+
+let num4=74.42;
+num4=87.44;
+num4=53.12341;
+
+console.log(Math.trunc(num4));//53
+
+console.log(Math.random());
+
+console.log(Math.trunc(Math.random()*(6-1)+1));
+
+
+let num5=+prompt("enter no which you want to fimd square root");
+console.log("the square root is: "+Math.sqrt(num5));
+
+
+let num6=+prompt("Enter the number which you want tpo find the cube root");
+console.log("Cube root Is:"+Math.cbrt(num6));
+
+
+let num7=+prompt("Enter the number");
+let power=+prompt("enter the power value");
+
+console.log(`the value is${num7} and the power is${power} there power is:`+Math.pow(num7,power));
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

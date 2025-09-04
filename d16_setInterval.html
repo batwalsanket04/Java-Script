@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    Asynchronous Behaviour:
+
+    Js is single threaded lang .and thats why it work in synchronous manner.
+    It means that the code will get executed line by line from top to the bottom.
+    In this case the function wich takes time to execute makes others function wait for thair turn.
+    to avoid this asynchrpunous behaviou is implemented.
+    In asynchronous Js can hold or block any function can take timr ans allow other fucntion to perform their execution.
+
+    becouse of this time taking function can perform in thier own time while the other function carry out thoier work.
+
+
+
+
+
+    This asynchronous behaviour can be implemanetd using:
+
+    1callback
+    2.asynch and await
+    3.promises
+    4.setInterval
+    5setTimeout
+
+    ****************************************************************************
+
+    setInterval:This method takes two Argument,i.e callback function and time interval in milliseconds
+                It executes the given callback fucntion  repeatetly after the given interval.
+                If thier is any function performing its task ,it will continue its work without being intruppted by this setInterval.
+
+                this is how setInterval will performn its task asyncrounously.
+
+    
+    setTimeout(callback,time_interval):This method also takwe s two argument i.e
+
+    <script>
+        let timenow=new Date();
+
+        function greet()
+        {
+            console.log( "hello the time is:"+timenow.toLocaleTimeString());
+
+        }
+       let si1= setInterval(greet,2000);
+
+        let si2= setInterval(()=>{
+            console.log("this is executed simulteniously");
+        },2000);
+
+
+
+        function stop(){
+
+            clearInterval(si1);
+            clearInterval(si2);
+
+        }
+
+        let cnt=0;
+        let si1=setInterval(()=>{
+            cnt++;
+            console.log(cnt);
+        })
+        
+
+
+            </script>
+</body>
+</html>

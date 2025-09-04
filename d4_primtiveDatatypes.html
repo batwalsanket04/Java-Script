@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    
+    Primtive datatypes
+
+    number: It is used to store numerical values upon which we we perform some arithmetic operations.
+
+    string: It is a collection of characters which is stored between two double quotes.
+
+    boolean: It is used to give 'true' or 'false' values
+
+    undefined: It is given when we create a variable but do not store any value in it.
+               Since JS is a dyanmically written langauge, it detects the datatype of the 
+               variable at the time of execution.
+               If there is no value stored in the variable, JS cannot determine the datatype of the variable.
+               Thats why it gives us undefined
+
+    null: When we do not get any object in the variable it returns null.
+          null itself has datatype 'object'.
+          It denoted empty colletion/object.
+
+    bigInt: It is used to store very large numbers in the integer format(without decimal point)
+            To make a number bigInt, we need to insert 'n' at the end of the number.
+
+    Symbol: It is a datatype from ModernJS(ES6)
+            It is used to generate unique values.
+            Never two keys will be be the same.
+            The Symbol can be used as the unique key for any object.
+    
+    -->
+
+    <script>
+      let n1 = 45.59;
+      console.log(typeof n1);
+      console.log(n1 + 40);
+      console.log("**********************");
+      let s1 = "I like Javascript(ES6)!!!!";
+      //   let s1 = "12345";
+      //   let s1 = "Javascript";
+      console.log(typeof s1);
+      console.log("**********************");
+
+      //   let b1 = true;
+      let b1 = false;
+      console.log(typeof b1);
+      console.log("**********************");
+      let und1;
+      console.log(typeof und1);
+      console.log("**********************");
+
+      let nl1 = null;
+      console.log(nl1);
+      console.log(typeof nl1);
+
+      //   let myEle = document.getElementById("ele1");
+      //   console.log(myEle);
+      //   console.log(typeof myEle);
+      //   myEle.innerHTML = "Nothing to show here!";
+      console.log("**********************");
+
+      let bg1 = 9845092345709283942983479823749842734;
+      console.log(typeof bg1);
+      console.log(bg1);
+      console.log(bg1 + 1000000);
+      console.log("**********************");
+      let bg2 = 9845092345709283942983479823749842734n;
+      console.log(bg2);
+      console.log(bg2 + 1n);
+      console.log(typeof bg2);
+      console.log("**********************");
+
+      let sym1 = Symbol("ABC");
+      console.log(sym1);
+      console.log(typeof sym1);
+
+      let sym2 = Symbol("ABC");
+      console.log(sym2);
+      console.log(typeof sym2);
+      console.log(sym1 == sym2);
+      console.log("**********************");
+
+      let uniId = Symbol("id");
+
+      let obj1 = {
+        name: "Rutvij",
+        balance: 1500000,
+        pwd: "rutvij123",
+      };
+
+      obj1[uniId] = 101;
+      console.log(obj1);
+
+      console.log(obj1[uniId]);
+    </script>
+  </body>
+</html>

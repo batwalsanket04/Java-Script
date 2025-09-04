@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #div1 {
+        width: 90%;
+        margin: auto;
+        height: 60vh;
+        border: 2px solid black;
+        border-radius: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+    
+    Events
+
+    The actions that are performed on a website using the inputs devices(mouse, keyboard), window or forms
+    are called events
+
+    Javascript is an event driven language, i.e. it can respond to these actions by performing some or 
+    other task
+
+    'on' is a prefix used while writing the event.
+
+    In JS, we get four types of events:
+
+    1. Mouse events
+    2. Keyboard events
+    3. Window events
+    4. Form events
+
+
+    Mouse events
+
+    The actions performed using the mouse are called mouse events.
+
+    1. onclick: This event occurs when we click the left mouse button
+    2. ondblclick: This event occurs when we double click the left mouse button 
+    3. oncontextmenu: This event occurs when the mouse right button is clicked
+    4. onmouseover: This event occurs when the mouse pointer enters the element area
+    5. onmouseout: This event occurs when the mouse pointer leaves the element area.
+    6. onmousewheel: This event occurs when the mouse scroll wheel has been rotated
+    7. onmousedown: This event occurs when any mouse button is pressed down
+    8. onmouseup: THis event occurs when any mouse button that has been pressed in is left.
+    
+    -->
+
+    <!--
+    
+    The below events should be written in the tag body. They are kept outside to 
+    prevent confusion in mousedown and mouseup
+    
+    onclick="sclick()" 
+    oncontextmenu="rclick()" -->
+    <div
+      id="div1"
+      ondblclick="dclick()"
+      onmouseover="mouseover()"
+      onmouseout="mouseout()"
+      onmousewheel="mousewheel()"
+      onmousedown="mousedown()"
+      onmouseup="mouseup()"
+    >
+      <h1 id="msg"></h1>
+    </div>
+    <script>
+      let myDiv = document.getElementById("div1");
+      let message = document.getElementById("msg");
+
+      function sclick() {
+        myDiv.style.backgroundColor = "red";
+        message.innerHTML = "Mouse left button clicked!";
+      }
+
+      function dclick() {
+        myDiv.style.backgroundColor = "green";
+        message.innerHTML = "Mouse left button has been double clicked!";
+      }
+      function rclick() {
+        myDiv.style.backgroundColor = "blue";
+        message.innerHTML = "Mouse right button has been clicked!";
+      }
+
+      function mouseover() {
+        myDiv.style.backgroundColor = "orange";
+        message.innerHTML = "Mouse has entered the element area!";
+      }
+
+      function mouseout() {
+        myDiv.style.backgroundColor = "purple";
+        message.innerHTML = "Mouse pointer has left the element area!";
+      }
+
+      function mousewheel() {
+        console.log("Mouse wheel has been scrolled!");
+      }
+
+      function mousedown() {
+        myDiv.style.backgroundColor = "lavender";
+        message.innerHTML = "Mouse  button has been pressed down!";
+      }
+
+      function mouseup() {
+        myDiv.style.backgroundColor = "lightyellow";
+        message.innerHTML = "Mouse button has been un-pressed!";
+      }
+    </script>
+  </body>
+</html>

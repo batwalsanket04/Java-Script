@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    
+    use strict
+
+    It is a rule/pragma which tells our browser how to execute the javascript code.
+    It puts our browser on 'strict mode'
+    Because of this, the use of undeclared variables is prevented.
+
+    This helps the developer to write cleaner codes which will be better for execution and for troubleshooting
+    
+    'use strict' can be used in blockn scope as well as on the global scope.
+    -->
+    <script>
+      "use strict"; //Global scope strict mode
+
+      //   let e2;
+      e1 = "Javascript"; //This will give error because 'use strict' does not allow usage of undeclared variables.
+      console.log(e1);
+
+      e2 = "Another undeclared variable";//This will also give error because 'use strict' does not allow usage of undeclared variables.
+      console.log(e2);
+
+      var e1; //The code will give error when we comment this decalration. Because 'use strict' will not allow usage of un-declared variables.
+      console.log("My code ended here!");
+    </script>
+  </body>
+</html>

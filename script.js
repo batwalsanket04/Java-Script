@@ -1,0 +1,1 @@
+  alert(" Hello evryone, this is being  written using external java script")

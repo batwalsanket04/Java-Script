@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #result {
+        border: 2px solid red;
+        border-radius: 10px;
+      }
+    </style>
+    <script>
+      console.log("Hello World!");
+      console.log(20 + 40);
+      console.log(false);
+      //   alert("Hello everyone! This is displayed using alert");
+      console.log("This is displayed after alert");
+
+      document.write("Hello everyone! This is displayed in document.write");
+      document.write("<h1>Hello World!</h1>");
+      alert("This is for stopping the flow of code");
+    </script>
+  </head>
+  <body>
+    <!-- <h1 id="result">This is the original content</h1> -->
+
+    <!-- <h5 id="result">This is sample HTML element</h5> -->
+    <button onclick="changeRes()">Change result</button>
+    <button onclick="alert('Hello World! Inline Javascript')">Inline JS</button>
+    <!-- 
+    
+    Output possibilities
+
+
+    1. console.log: It is used to display the output in the console of the browser.
+
+    2. alert: This is used to display the output in a separate pop up box on the browser.
+              It does not require us to open the console like in previous method.
+
+            The disadvantage for alert is that it halts the execution of the program 
+            until the confirmation of alert.
+
+
+    3. document.write: This is used to display the output of the JS code on the webpage itself.
+                     The output can even be displayed in the form of HTML elements.
+
+    4. innerHTML: This method displayes our output in a particular HTML element.
+                    It also supports the HTML tags in the output.,
+    
+
+
+    Effects of <script> tag placement:
+
+        1. In the head section: The JS code in the script tag will start its execution before HTML elements are loaded.
+                                Due to this, if we want to work with any HTML element, we won't be able to do it and will get error.
+                                It there is any code in this script tag which is lengthy and might take time, it will affect the performance of our page. 
+                                The page will be displayed properly only after that code is finished
+        2. At the end of body section: When the script tag is written in the end of body section, it will get the necessary 
+                                HTML elements for its operation.
+                                If there is any lengthy code in this script tag, it won't hamper the performance of the HTML page.
+    -->
+    <script>
+      let myEle = document.getElementById("result");
+      function changeRes() {
+        myEle.innerHTML = "This is the <mark>modified content</mark>";
+      }
+    </script>
+  </body>
+</html>

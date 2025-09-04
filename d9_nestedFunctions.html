@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    Nested functions:
+
+    These are the functions which are declared within a main function and are used only within that function.
+    Such functions are mostly made up of logic which is limited to that particular main function itself
+    -->
+    <script>
+      function outerFunction() {
+        console.log("This is the outer/main function");
+
+        function innerFunction() {
+          console.log("This is the inner function");
+        }
+
+        return innerFunction;
+      }
+
+      let nestedFunction = outerFunction();
+      //   innerFunction();
+
+      nestedFunction();
+    </script>
+  </body>
+</html>

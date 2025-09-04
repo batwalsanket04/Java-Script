@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+     Extra Arguments:-
+
+     In javaScript ,the arguments that we pass to a function are stored in collection.
+     from this collection only those numbers of arguments are used as the number of parameters .
+     but that does not mean that we have to pass only that much argumnets as the parameters.
+     javascript allows us to pass more arguments than the parameters without giving a any error.
+     these extra arguments can be used /handled by the concept of rest parameters.
+
+     In rest parameters ,all the extra arguments are stored in a collection which can later be used for any desired perpose.
+     for this,we use rest operator.
+
+     Rest(....parametername) operator is a modern JS operator(ES6)
+     it collects all the individual elements and stores then which a collection.
+     we can then use this collection for our required purpose.
+
+    -->
+    
+    <script>
+        function hello(name,role,friends){
+            console.log(`hello ${name}  you are ${role}`);
+            console.log(`${name}'s friends are ${friends}`);
+            //console.log(arguments);
+        }
+        hello(
+            "mayur",
+            "Frontend Developer",
+            "sanket",
+            "soham",
+            "swapnil",
+            "nikhil",
+        );
+
+
+
+
+        function fav(...favNum){
+            console.log(`My favourite Number is:${favNum}`);
+        
+        }
+        fav(1,2,3,4,5);
+    </script>
+</body>
+</html>

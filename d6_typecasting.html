@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Typecasting
+
+    it is the process of converting from one form into another .
+    it is required so that we can use data appropriatly.
+
+    
+    1.Modifying with prompt:-
+     - we add the "+" as prefix to the prompt method .it convert the data in prompt to a number.
+     -prompt gives a string by defoult.
+
+
+    2.Number();
+     -this method helps to us convert our string into number including the decimal value becouse of this method .we can converts the decimal string into decimal decimal string.
+
+    3.ParseInt();
+    -this method helps to convert our string into a number while igniring decimal values.
+    -the methods stop the conversion of the string as soon as it finds any non-numeric character.
+ -->
+
+
+
+
+    <script>
+ 
+ let num1= +prompt("Enter the first number");
+ let num2= +prompt("enter The second number");
+
+ console.log( num1+ " is of type " + typeof num1);
+ console.log( num2+ " is of type " + typeof num2);
+
+
+ //Number
+
+ let mynum1=number(num1);
+ let mynum2=number(num2);
+
+ console.log(mynum1 + " is of type "  +typeof mynum1);
+ console.log(mynum2 + " is of type "  +typeof mynum2);
+
+ console.log(mynum1+mynum2);
+
+
+ //ParseInt()
+
+
+ let my1=parseInt(num1);
+ let my2=parseInt(num2);
+
+ console.log(my1 + " is of type "  +typeof my1);
+ console.log(my2 + " is of type "  +typeof my2);
+
+ console.log(my1+my2);//gives us approximate value as output.
+ 
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

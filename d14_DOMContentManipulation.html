@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #div1 {
+        width: 70%;
+        height: 40vh;
+        margin: auto;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+    
+    DOM methods for working with the content
+
+    1. innerHTML
+
+                Returns: It returns all the HTML content inside the given element.
+
+                Setting: It changes the HTML content inside the given element. It supports the HTML tags.
+
+    2. outerHTML
+
+                Returns: It returns the HTML content from the element alonf with the element itself.
+
+                Setting: It replaces the entire element with the new given HTML content. It also 
+                         supports the HTML tags
+
+
+    3. innerText: 
+
+                Returns: It ignores the HTML elements and returns only the text content from the given element.
+
+                Settings: It changes the text content of the element and prints the HTML tags as it is. 
+                It does not support the HTML tags
+    4. outerText: 
+
+                Returns: It returns the text content of the element.
+
+                Setting: It replaces the entire element with the given plain text content. 
+                         It does not apply the HTML tags.
+            
+    5. textContent: It returns the text content of the element with all the HTML indentations.
+    
+    -->
+    <div id="div1">
+      <h1 id="title1">This is how <mark>DOM</mark> works!</h1>
+    </div>
+    <script>
+      // innerHTML
+      console.log(document.getElementById("div1").innerHTML);
+      //   console.log(document.getElementById("title1").innerHTML);
+
+      //   document.getElementById(
+      //     "div1"
+      //   ).innerHTML = `<h1><i>This is the <ins>modified HTML</ins> content</i></h1>`;
+
+      //   outerHTML
+      console.log("************************");
+      console.log(document.getElementById("div1").outerHTML);
+
+      //   document.getElementById(
+      //     "div1"
+      //   ).outerHTML = `<span style="background-color:orange"><strong>This is the modified HTML content</strong></span>`;
+      console.log("************************");
+      console.log(document.getElementById("title1").innerText);
+
+      //   document.getElementById(
+      //     "title1"
+      //   ).innerText = `This is the modified <strong>inner Text</strong>`;
+
+      console.log("************************");
+      console.log(document.getElementById("div1").outerText);
+
+      //   document.getElementById(
+      //     "div1"
+      //   ).outerText = `<h1>This is the modified text content</h1>`;
+      console.log("************************");
+      console.log(document.getElementById("div1").textContent);
+    </script>
+  </body>
+</html>

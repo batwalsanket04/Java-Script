@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onkeydown="keydown()" onkeyup="keyup()">
+    <!-- 
+    Keybaord events
+
+
+    1. onkeypress: This event occurs when we press any printable key on the keyboard 
+                    (alphabets, symbols, space, enter, etc). This is deprecated event, 
+                    instead of this we use keydown event
+
+    2. onkeydown: This event occurs when any key of the keyboard is pressed.
+                  This event is now used to identify the key combination in various platforms
+
+    3. onkeyup: This event occurs when any keyboard key that has been pressed in is un-pressed
+    -->
+    <h1 id="msg"></h1>
+    <script>
+      let message = document.getElementById("msg");
+
+      function keypress() {
+        message.innerHTML = "A printable key is pressed";
+      }
+      function keydown() {
+        message.innerHTML = "A keyboard key is pressed";
+      }
+      // **The below code demostrated what key is being pressed.
+
+      //   document.body.addEventListener("keydown", (e) => {
+      //     message.innerHTML = `${e.key} has been pressed!`;
+      //   });
+
+      function keyup() {
+        message.innerHTML = `The keyboard key has been un-pressed!`;
+      }
+    </script>
+  </body>
+</html>

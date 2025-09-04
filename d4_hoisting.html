@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    
+    Hoisting:
+
+    It is the default behaviour of Javascript
+    It allows us to declare our variable later on after intializing and using it first.
+    When we declare our variable after intialization and use, Javascript internally takes 
+    the variable to the top of the code.
+
+    Because of this, the variable comes in the original flow of the variable lifecycle and 
+    thus gets executed properly
+
+    At times, the developer can also forget declaring the variable due to the 
+    hoisting behaviour of Javascript.
+    This can create problems in the execution and troubleshooting of the JS code.
+    
+    The concept of declaration is only applicable on var.
+
+    let and const do not support hoisting.
+    -->
+    <script>
+      // Normal flow of variable
+
+      //   Intialize
+      num1 = 35;
+
+      //   Use
+      console.log(num1);
+
+      //   Declare
+      var num1;
+
+      //   Lets try hoisting on the let and const
+
+      num2 = 40;
+      console.log(num2);
+
+      //   let num2;        //This is not supported. We will get error on the console.
+      /*
+
+      Const does not support hoisting because it has to declared and assigned at the same time.
+      Since we cannot intialize const declarator separately, it cannot be hoisted.
+
+
+      const num3
+      ;num3= 101;
+      */
+    </script>
+  </body>
+</html>

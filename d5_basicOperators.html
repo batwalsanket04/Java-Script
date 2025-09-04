@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    
+    Basic Operators
+
+
+
+    Arithmetic operators:
+    +,-,*,/,%
+
+
+    Assignment operators
+    =, +=, -=, *=, /=, %=
+
+    Comparison operators
+    <, >, <=, >=
+
+    Logical operators
+    !, &&, ||
+
+    Incr/Decr operators
+    ++, --
+
+
+    Equality operators
+    == (Value equality), === (Strict equality)
+    
+    -->
+    <script>
+      console.log(10 + 30);
+      console.log(50 - 30);
+      console.log(4 * 5);
+      console.log(30 / 3); //Quotient
+      console.log(13 % 3); //Remainder
+      console.log("************************");
+
+      //   10+5=15      Mathematics
+      let num1 = 75; //assignment operator. It is storing the value 75 into the variable num1
+      //   num1 = num1 * 5; The value of the calcualtion num1*5 is gettting stored in the variable num1
+      console.log(num1);
+      //   num1 = num1 + 5;
+      num1 += 5;
+      console.log(num1); //80
+
+      num1 -= 20;
+      console.log(num1); //60
+
+      num1 *= 2;
+      console.log(num1); //120
+
+      num1 /= 30;
+      console.log(num1); //4
+
+      num1 %= 3;
+      console.log(num1); //1
+      console.log("*****************************");
+
+      console.log(3 < 4); //true
+      console.log(4 < 3); //false
+      console.log(10 > 12); //false
+      console.log(30 > 5); //true
+
+      console.log(10 < 10); //false because both values are same
+      console.log(5 > 5); //false because both values are same
+      //   To handle the above situation we have following operators
+
+      console.log(23 <= 25); //true
+      console.log(24 <= 25); //true
+      console.log(25 <= 25); //true
+      console.log(26 <= 25); //false
+
+      console.log(45 >= 43); //true
+      console.log(45 >= 44); //true
+      console.log(45 >= 45); //true
+      console.log(45 >= 46); //false
+      console.log("*****************************");
+
+      //   not
+      console.log(5 > 3); //true
+      console.log(!5 > 3); //false
+
+      //   and
+      console.log(10 > 6 && 31 < 33); //true
+      console.log(10 > 6 && 31 < 20); //false because one condition is invalid
+
+      //   or
+      console.log(5 < 7 || 10 > 9); //true
+      console.log(5 < 7 || 10 > 15); //true because other condition is correct
+      console.log(10 < 7 || 10 > 15); //false because both conditions are wrong
+      console.log("********************************");
+
+      num1 = 15;
+      console.log(num1); //15
+      num1++; //Incresed the value by 1
+      console.log(num1); //16
+
+      num1--; //Decreased the value by 1
+      console.log(num1); //15
+
+      console.log("*****************************");
+
+      /*
+        Value equality (==): This operator only checks for the values of the given data.
+                             If the values are same but datatypes are different, it will still return true.
+      */
+      console.log(10 == 10); //true
+      console.log(20 == 15); //false
+      console.log(10 == "10"); //true because the values of both sides are same
+      console.log(10 == "Ten"); //false because there is a number on one side and a spelling on other side
+
+      /*
+      Strict equality (===): This operator not only checks for the value of the data but also for the datatype.
+      */
+
+      console.log(10 === 10); //true
+      console.log(10 === 20); //false because values are different
+      console.log("20" === 20); //false because datatypes are different on both sides
+    </script>
+  </body>
+</html>

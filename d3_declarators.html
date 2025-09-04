@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    
+    Declarators
+
+    These are the keyowrds which specify the scope of any variable
+    Scope is the area where the variable should be applicable.
+    If the scope is improperly defined then the variable may get access to 
+    other parts of code where it can cause issues.
+
+    There are three declarators in JS:
+    1. var 
+    2. let
+    3. const
+    
+    
+    
+    
+    var: This is a declarator from older JS
+         This is a global scope declarator
+         It can be redeclared and re-assigned
+
+    let: It is a feature from ModernJS(ES6)
+         It is a block scope declarator
+         It cannot be redeclared but it can be re-assigned
+
+
+    const: It a feature from ModernJS(ES6)
+           It is also used for creating a block scope declarator
+           It cannot be redeclared nor re-assigned
+
+
+
+
+    Lifecycle phases of a variable
+
+    1. Declare:  In this phase we only create a container/variable having declarator and identifier. 
+                 We do not store any data in this yet.
+
+    2. Intialize: In this phase, we actually store some data into the container/variable
+
+    3. Use: In this phase, we use the variable with data stored in it for some processing.
+    -->
+
+    <script>
+      // VAR
+
+      //   var num1 = 10;
+      //   console.log(num1); //10
+      //   if (true) {
+      //     var num1 = 40;
+      //     console.log(num1); //40
+      //   }
+      //   console.log(
+      //     num1
+      //   );
+      /*40 (Because the num1 created inside the 'if' code block
+                            is having var declarator, hence it becomes a global scope variable and
+                            it is accessible outside the 'if' code block)
+                            */
+      /*
+      var myNum1; //Declare
+
+      var myNum1; //Redeclare
+      myNum1 = 29; //Initialize
+
+      myNum1 = 95; //Re-assign/re-initialization
+
+      console.log(myNum1); //Use
+
+      */
+
+      //   LET
+
+      //   let num1 = 100;
+      //   console.log(num1); //100
+      //   if (true) {
+      //     let num1 = 200;
+      //     console.log(num1); //200
+      //   }
+      //   console.log(num1); //100
+
+      /*
+      let n1;
+      n1 = 100;
+      console.log(n1);
+      //   let n1;        //Not allowed
+      n1 = 150;
+      console.log(n1);*/
+
+      //   CONST
+
+      //   const n1 = 30;
+      //   console.log(n1); //30
+
+      //   if (true) {
+      //     const n1 = 50;
+      //     console.log(n1); //50
+      //   }
+
+      //   console.log(n1); //30
+      /*
+      const num1 = 100; //It needs to be initialized at the time of declaration only.
+      console.log(num1);
+
+      num1 = 150;
+      console.log(num1); //Gives error on the console.
+      */
+
+      var n1 = 100;
+      console.log(n1); //100
+
+      function demo() {
+        var n1 = 500;
+        console.log(n1);
+      }
+
+      demo(); //500
+      console.log(n1); //100
+    </script>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    String in-built methods
+
+    length: It returns the count of characters in the string.
+
+    slice(strating_index, ending_index): It extracts a portion of string from the starting index 
+                    till before ending index. It supports the negative indices.
+
+    substring(straing_index, ending_index): It extracts a portion of string stating from the 
+                    given starting index till before the ending index. It does not support negative indices.
+                    The output with negative index positions is illogical.
+
+    substr(starting index, no of characters): This method also returns the extracted portion from a string, 
+                    but it takes the starting index and the no of characters as the arguments.
+
+    touppercase() and toLowercase(): Converts our string into capital letters or small letters
+
+    concat(): This method concatenates strings together.
+
+    indexOf(): It returns the index position of first occurence of the given character
+
+    lastIndexof(): It returns the index position of last occurence of the given character.
+
+**The above two methods will return -1 in case the element is found in the given string. This is because
+the string has positive index positions starting from 0. If the return is negative, that means no such index
+position is present and it symbolizes that the element is not present in string
+
+
+
+    split('separator character'): This method divides our string into array elements from 
+                 the given separator character.
+
+    trim()/trimStart()/trimEnd(): These methods helps us to remove the whitespace from 
+                the starting or ending of the string
+
+    includes(): It check whether the given character/string is present in the string or not.
+                It is case sensitive.
+
+    replace(): This method replaces the first occurence of the given character/string with 
+               the replacement string/character.
+
+    pad()/padStart()/padEnd(): These methods increase the length of the string to the desired 
+               length by adding some character to start or end of the string.
+    
+
+
+IQ: What is the difference between slice() and substring()?
+IQ: What is the difference between slice(), substring() and substr()
+    -->
+    <script>
+      let str1 = "Javascript";
+
+      let str2 = "Web";
+      let str3 = "Development";
+
+      let str4 = "I am a frontend developer";
+
+      let str5 = "    HTML    ";
+
+      let hours = "3";
+      /*
+              J   A   V   A   S   C   R   I   P   T
+              0   1   2   3   4   5   6   7   8   9
+      */
+
+      console.log(`${str1} has ${str1.length} characters in it`);
+
+      console.log(str1.slice(2, 6)); //vasc
+      console.log(str1.slice(-5, -3)); //cr
+
+      console.log(str1.substring(2, 6)); //vasc
+      console.log(str1.substring(-5, 3)); //Does not give proper output
+
+      console.log(str1.substr(2, 6)); //vascri
+
+      console.log(str1.toUpperCase());
+      console.log(str1.toLowerCase());
+
+      console.log(str2.concat(str3));
+
+      console.log(`'i' is at index position of ${str1.indexOf("i")}`);
+      console.log(`'a' is at index position of ${str1.indexOf("a")}`);
+
+      console.log(
+        `'a' is last found at index position ${str1.lastIndexOf("a")}`
+      );
+
+      console.log(str4.split("a"));
+      //   str5 = str5.trimStart();
+      //   str5 = str5.trimEnd();
+      str5 = str5.trim();
+      console.log(`${str5} has ${str5.length} characters in it`);
+
+      console.log(
+        `${str4} has 'Developer' word in it: ${str4.includes("Developer")}`
+        // `${str4} has 'web' word in it: ${str4.includes("web")}`
+      );
+
+      //   console.log(str4.replace("frontend", "web"));
+      console.log(str4.replace("a", "A"));
+
+      console.log(hours.padStart(2, "0"));
+      console.log(hours.padEnd(4, "#"));
+    </script>
+  </body>
+</html>

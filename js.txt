@@ -1,0 +1,184 @@
+
+Q.What is Scripting languages..?
+Ans:-Scripting is type of programming languages only.
+    -The regular programming language get compipled first and then get executed.
+    -the scripting lang get compiled at the time of execution itself and then get executed.
+    - hence the scriptinmg lang. are slower  for compared to the programming lang.
+    -java script such as scripted lang. which gets interpreted by a translator in the browser while executing itself.
+
+1.about js
+
+Q.features of js.?
+
+ans:-Structured programming like c.
+    -weakly/dynamically /losely types language.
+    -light weighted and interpreted lang.
+    -case sensitive
+    -plateform independenat
+    -provides good controll to users over the web browser.
+
+
+Q.Java And javascript
+
+ java:-
+      - it is class based lang.
+      -multithreaded lang.
+      -consumes more memory
+      -it is a class based  lang
+      -it is compiled programming lang.
+      -used to build standalone or enterprise level application.
+
+javaScript:-
+
+       -it is event driven lang 
+       -single threaded lang
+       -consume less memory
+       it is as objext based lang
+       -it is interpreted scripting lang
+       -used to build interactive website,web application and mobile application.
+
+appilications developes by using javasript:-
+
+  1.amazon
+  2.Flipcart
+  3.Uber
+  4.Netflix
+  5.Dualingo
+  6.AngryBird
+  7.LikedIn
+  8.VS Code
+
+
+3.uses of js:-
+            -client side Scripting.
+            -displaying popups and dialog boxes.
+            -dynamic dropdown menus.
+            -displaying time and date
+            -displaying clocks
+
+
+4.dis-advantages js:-
+              -Security as the code can be viewed in the console.
+              -Old browser do not support javascript.
+              -javascript works on single inheritance only.
+              -one line of error can cause problem in the entire flow of program.
+              
+Q.history of js.?
+ans:-it was invented by Brenden Eich in 1995
+    - it was developed in just 10 days.
+    -it was developed by notscape communication for their new browser.
+    -it was initially called mocha which later become live script and then was called java script.
+    - due to a conflict with similar scripting lang. by microsoft .this lang was handed over to ECMA which standerdized it
+     and it was then called as ECMA script (ES).
+6.way to write js:-
+                 i.External js:- It is type of javascript which is written in  a saperate file
+                                 having .js extension and connected to the HTML doc using Script tag.
+
+                 ii.Internal Js:- When we write the js code in the code HTML document using Scripttag  it is called internal Js.
+
+                 iii. inline js:-when the js code is written in the body of the openining tag of any element, its called as inline js.
+
+7:-Where we can write the js code:-
+
+                 1.ON Vs Code:-js code written in the vs code in new file when we want to code as functionality and make it permanant.
+                 2.on console of any browser:- when we want to use temporarly code. 
+
+8.Statement and comment:-
+
+  statement:-A statement is an instruction given to the computer. 
+             -It is how programming languages in general work, not just JavaScript, but all programming languages.
+
+  comment:-Comments are like notes to yourself or other programmers in the programming languages. 
+          -It is good practice to keep comments in your code.
+
+
+
+  1.single line comment:-(//)
+
+  2.multiline commennt:-(/*   */)
+
+
+9.output posibilities:
+                
+                1.console.log:-
+                 -Its is use to display of output in the console of the browser.
+
+                2.document.write:-
+                 -this is used to display the output of the js code on the webpage itself.
+                 -the output can  be even displayed in the form of html elements.
+
+                3.alert:
+                -IT will be displayed on the browser with the help of alert formalt.
+                -it does not requires us to open the console like in previous method
+                -the Dis adv.for alert is that is halts the execution of the program untill the confirmation of alert.
+
+
+                4.inner HTMl:-
+                this mnethod displyes our output in a perticuler  html element.
+                it also support html tag in the output.
+
+10.Effects of Script tag plaement:-
+
+                1.in the head  section:- the js code in the script tag will starts its execution before html element are loaded.
+                                        due to 
+
+               2.at the end of the body section:-
+              
+11.what is variable in js:-
+  
+  - variables are the container which are used to store some data which can be later used for processing.
+  -variable made of two thing.
+
+  ex. var(declarator) n1(identifire)=100( data);
+
+  1.identifire:-
+
+  - the identifire is the name given to variable which can be used for uniquely identify the given variable.
+
+  -rules of identifire:-
+
+   1.the name of the variable should not be any reserved keyword (if.while ,let,for,new,do, const etc..)
+   2.the name of the varible should not contain any space.
+   3.instead of spaces we can use "PascleCasing" "camelCasing"
+   4.we cannot use any other symbol than "$","_" is allowd only .
+   5.we can not used varibale name as number at the starting.
+   6.-also we cant start the varible as number.
+
+  2.declarator:
+   
+  -it defines the scope of the varible in the code.
+  -thus are the keyword which specify the scope of any variable.
+  -scope is the area of the variable should be applicated.
+  -if the scope is improperly defined then the variable get access to the other part of code it can couse issues.
+
+    
+  -we get three declarator as follow
+   1.var:-
+           -this is declarator from older js.
+           -this  is global scope declarator.
+            -it can  be redeclared and reassigned.
+   2.let:-
+            -it is feature from ES6 (2015)
+            -it is block scope declarator
+            -this is not allows to redeclare but it allows to re-assign.
+   3.const:-
+           -feature of modern js (ES6)
+           -it is also used for creating a block scope declaretor.
+
+
+
+* Hoisting //imp IQ
+
+ hoisting:- iS THE defoult behaviour of js.
+            it allows use to declare our variable later on after initializing using it first.
+            -when we declare outr variable after initializing and use  ,js internally takes variable to the top of the code.
+
+            -at time ,the behaviour can also forget declarating the variable due to hosting  behaviour of js.
+            -this can create problem in the execution and troubleshooting of the js code.
+
+
+
+            
+
+        
+         

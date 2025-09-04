@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let todayDate = new Date();
+      let monthsArr = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "apr",
+        "May",
+        "Jun",
+        "July",
+        "Aug",
+        "Sept",
+        "Oct",
+        "Nov",
+        "Dec",
+      ];
+
+      let weekDays = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+
+      console.log(todayDate);
+
+      console.log(todayDate.getDate());
+      let monthNo = todayDate.getMonth();
+      console.log(monthsArr[monthNo]);
+
+      //   Practical approach
+      //   console.log(monthsArr[todayDate.getMonth()]);
+
+      console.log(todayDate.getFullYear());
+
+      //   console.log(todayDate.getDay());
+
+      console.log(weekDays[todayDate.getDay()]);
+      console.log("*********************************");
+
+      console.log(todayDate.getHours());
+      console.log(todayDate.getMinutes());
+      console.log(todayDate.getSeconds());
+      console.log("*********************************");
+
+      let custDate = new Date("05 June 2003 05:30:32");
+      console.log(custDate);
+
+      console.log(custDate.toLocaleDateString());
+      console.log(todayDate.toLocaleDateString());
+
+      console.log(todayDate.toLocaleTimeString());
+    </script>
+  </body>
+</html>

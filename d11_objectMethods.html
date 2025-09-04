@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    
+    Object methods
+
+    Object.keys(): It returns a collection of all the keys from the object
+
+    Object.values(): It returns all the values frmo the objects in form of a collection
+
+    Object.entries(): It returns a coleection of arrays made of the key value pairs in the given object.
+
+    Object.getOwnPropertyNames(): It returns a colelction of all the enumerable and non-enumerable 
+                    properties in the object.
+
+    Object.is(): It checks whether both the arguments passed are exactly or not
+
+    isFinite(): This method check whether given value is Finite or not
+
+    inNaN():It checks whether the given value is Not a number.
+
+    Object.freeze(): This method prevents modification of the values and also 
+                     it does not allow adding any new keys to the object
+
+    Object.isFrozen(): It checks whether the object is frozen or not.
+
+    seal(): This method prevents adding any new keys to the object but we can 
+            modify the values of existing keys
+
+    Object.isSealed(): It checks whether the object is sealed or not.
+    
+    -->
+    <script>
+      let obj1 = {
+        id: 101,
+        name: "Anisha",
+        phone: 8767543423,
+        email: "anisha@gmail.com",
+      };
+
+      console.log(obj1);
+
+      //   for (let keys in obj1) {
+      //     console.log(`${keys}`);
+      //   }
+
+      console.log(Object.keys(obj1));
+
+      console.log(Object.values(obj1));
+
+      console.log(Object.entries(obj1));
+
+      console.log(Object.getOwnPropertyNames(obj1));
+
+      console.log(Object.is(20, "20"));
+      console.log("******************************");
+      console.log(isFinite(1234567898765432123456789));
+      console.log(isFinite("Javascript"));
+      console.log("******************************");
+      console.log(isNaN(124345));
+
+      console.log(isNaN("Yash"));
+      console.log("******************************");
+
+      //   Object.freeze(obj1);
+      Object.seal(obj1);
+      console.log(`obj1 has been sealed here`);
+      obj1.id = 201;
+
+      obj1.location = "Pune";
+      console.log(obj1);
+
+      console.log(`obj1 is frozen : ${Object.isFrozen(obj1)}`);
+      console.log(`obj1 is sealed: ${Object.isSealed(obj1)}`);
+    </script>
+  </body>
+</html>

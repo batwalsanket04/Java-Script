@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    
+    Asynchronous Behaviour of JS:
+
+    JS is a single threaded language and thets why is works in Synchronous manner.
+    It means that the code will get executed lnie by line from top to the bottom.
+    In this case the functions which take time to execute makes others functions wait for their turn.
+    To avoid this asynchronous behaviour is implemented.
+    In asynchronous behaviour JS can hold or block any function can can take time and allow other 
+    functions to perform their execution.
+
+    Because of this the time taking functions can perform in their own time while the 
+    other function carry out their work
+    This asynchrnous behaviour can be implemented using:
+
+    1. callbacks
+    2. async and await
+    3. promises
+    4. setInterval
+    5. setTimeout
+    *****************************************************************************
+
+
+
+    setInterval(callback, time_interval): 
+    This method takes two arguments, i.e. a callback function and time interval in milliseconds
+    It executes the given callback function repeatedly after the given interval.
+    If their is any function performing its task, it will continue its work without being 
+    interrupted by this ssetInterval.
+    This is how the setINterval will perform its task asynchronously.
+
+    To stop the execution of setInterval, we get a method called clearInterval()
+
+
+    setTimeout(callback, time_interval):
+
+    This method also takes two arguments, i.e. a callback function and time interval in milliseconds
+    It will start the execution of the callback function after the given time interval.
+    But it executes the callback function only once.
+    after execution the setTimeout will stop.
+
+    -->
+    <!-- <button onclick="stop()">Stop Printing</button> -->
+    <script>
+      function greet() {
+        let timeNow = new Date();
+        console.log("Hello, the time is " + timeNow.toLocaleTimeString());
+      }
+
+      // greet();
+
+      // let si1 = setInterval(greet, 2000);
+
+      // let si2 = setInterval(() => {
+      //   console.log("This is executed simultaneously");
+      // }, 1000);
+
+      // function stop() {
+      //   clearInterval(si1);
+      //   clearInterval(si2);
+      // }
+      let cnt = 0;
+      let si1 = setInterval(() => {
+        cnt++;
+        console.log(cnt);
+      }, 1000);
+
+      // setTimeout(greet, 5000);
+
+      setTimeout(() => {
+        clearInterval(si1);
+      }, 10000);
+    </script>
+  </body>
+</html>

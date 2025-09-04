@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    
+    Iterative Loops
+
+    In this, we exeute our code miltiple times until the given condition is valid. 
+    Once the condition is invalid the execution of code stops.
+
+
+    For working with the iterative loops we need:
+
+    1. A variable(Conditional variable)
+    2. Initializtion of the conditional variable
+    3. OPeration of conditional variable
+
+    do-while
+
+    syntax
+
+    do{
+        Code block
+    }while(Condition)
+
+    Disadvantage:
+    1. The syntax can get problematic at the times of debugging
+    2. The code gets executed at least once even if the condition is invalid
+
+
+
+
+    while
+
+    syntax
+
+    while(Condition){
+    
+        Code block
+        
+    }
+
+
+    Advantage:
+    1. The syntax is more developer friendly while debugging
+    2. The code does not get executed at all if the condition is found invalid.
+
+
+
+    for
+
+    syntax
+
+    for(let i=0; i<=10; i++){
+        Code block
+    }
+    
+    Advantage:
+    It helps the developer by keeping the conditional variable declaration, condition, and operation together.
+
+
+
+    -->
+    <script>
+      // Do While loop
+
+      //   let num1 = 1;
+      //   let count = 0;
+      //   let op1 = "Hello";
+
+      //   if (num1 <= 5) {
+      //     console.log(num1);
+      //   }
+
+      //   do {
+      //     console.log(num1);
+      //     num1++;
+      //   } while (num1 <= 5);
+
+      //   Easier application of conditional variable
+      //   do {
+      //     // console.log("Hello");
+
+      //     op1 = op1 + " ";
+      //     console.log(op1);
+      //     count++;
+      //   } while (count < 10);
+
+      //   let myNum = 5;
+      //   do {
+      //     console.log(myNum);
+      //   } while (myNum < 5);
+
+      //   While
+
+      //   let num1 = 1;
+      //   let count = 0;
+
+      //   let myNum = 5;
+      //   while (num1 <= 5) {
+      //     console.log(num1);
+      //     num1++;
+      //   }
+
+      //   while (count < 5) {
+      //     console.log("Hello");
+      //     count++;
+      //   }
+
+      //   while (myNum < 5) {
+      //     console.log(myNum);
+      //   }
+
+      //   For
+
+      for (let i = 1; i <= 5; i++) {
+        console.log(i);
+      }
+
+      for (let ct = 0; ct < 5; ct++) {
+        console.log("Hello");
+      }
+    </script>
+  </body>
+</html>

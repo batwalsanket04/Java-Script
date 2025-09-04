@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Basic Method of Array
+
+    length:It Returns the number of elements of array.
+
+    push:It Adds the element in Last Of the array.
+
+    pop: It Remove one element of the last of the array.
+
+    unshift:It adds An element to the beginning of the array.
+    
+    shift:It remobves the one element from the beginning of the array.
+           It returns the elements which was removed from the beginning of the array.
+
+    
+    splice:splice(starting_index, no_of_elements): It removes the given no of element from the starting index
+                                                  
+
+    splice(starting_index,no_of_Elements,Replacements_elemets):
+                                      It removes the given no of elements from the starting index.
+                                      and keeps the replacement element in that place.
+
+    splice(starting_index,0,replacement_elements):
+                                      It does not removes any elemets from the array butt it 
+                                      keeps the replacement elements in the given starting index.
+
+
+
+
+
+     -->
+</body>
+
+<script>
+    let Arr1=[10,20,40,23,42,42,25,32];
+
+    console.log(Arr1);
+
+    console.log(Arr1.length);
+
+
+    for(let i=0;i<Arr1.length;i++)
+{
+    document.write(`<h3>${Arr1[i]}</h3>`);
+
+}
+
+ Arr1.push(101);
+ console.log(Arr1);
+
+
+ Arr1.pop();//no need to passed the arguments.
+ console.log(Arr1);
+
+Arr1.unshift(101);//Add the elements start of the array.
+console.log(Arr1);
+
+
+Arr1.shift();
+console.log(Arr1);
+console.log(Arr1.shift());//remove one number from beginning and return it.
+
+console.log("******************************");
+
+Arr1.splice(2,3);
+console.log(Arr1);//It removes the 3 elements from the index 2. 
+
+Arr1.splice(2,3,111,112,122,123,133);//It removes the 3 elements from the index 2 and adds the replacement elements.
+console.log(Arr1);
+
+
+Arr1.splice(2,0,123,241,133);//It does not remove any elements but adds the replacement elements at index 2.
+console.log(Arr1);
+
+
+
+
+
+
+
+</script>
+</html>

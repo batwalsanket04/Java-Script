@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    Ways to write functions is JS
+
+    1. Named function/Normal function: 
+            This is the most common way to write a function.
+            We write a function using 'function' keyword and we call it using the name assigned to the function.
+            The named functions are hoisted, i.e. they can be called even before declaring them.
+
+    
+    2. Variable named function/Variable expressions:
+            In this type, we crate a normal function and store it in a variable
+            For calling this function, we need to call the variable. If we call the stored function, it gives error
+            The variable named functions are not hoisted.
+
+
+    3. Anonymous functions:
+            It is somewhat similar to a variable named function, only the difference is that the function 
+            stored in the variable does not have any name.
+            For calling this function, we need to call the variable in which the function is stored.
+            This type is commonly used in callback functions.
+
+
+    4. Self invoking functions:
+            This is a type of function which calls itself automatically after it is declared.
+            It is written like an anonymous function but it is written in '( )' without storing in any variable
+            This type of functions are used to perform some action as soon as the page is loaded.
+
+    5. Arrow functions(Fat arrow/Lambda):
+            It is a function from ModernJS(ES6)
+            It replaces various types of functions especially anonymous functions.
+            This type is very commonly used in callback functions.
+            It does not involve writing the function keyword, instead, it directly uses the '()', '=>' and '{}'
+            Rules for writing the '{}' in arrow function:
+            1. It does not need '{}' if the code block is of one line.
+            2. If the code is of multiple lines or if the single code has return keyword, then the '{}' are mandatory
+
+    
+    -->
+    <script>
+      // Named function/Normal function
+      function demo() {
+        console.log("This is printed using Normal Function");
+      }
+      demo();
+
+      //   Variable named function/Variable expression
+
+      var myFunction = function demo1() {
+        console.log("This is printed in Variable named function");
+      };
+
+      //   demo1(); //Gives error
+      myFunction();
+
+      //   Anonymous function
+
+      let myFunction2 = function () {
+        console.log(`This is printed using Anonymous function`);
+      };
+
+      myFunction2();
+
+      //   Self invoking function
+
+      (function () {
+        console.log("This is printed from self invoking function");
+      })();
+
+      //   Arrow function
+
+      //   The below function does not need '{}' because the code block is of single line.
+      //   let myFunction3 = () =>
+      //     console.log("This is printed using arrow function");
+
+      //If the code is multilined, { } are mandatory
+
+      //   let myFunction3 = () => {
+      //     console.log("This is first line");
+      //     console.log("This is second line");
+      //   };
+
+      //IF the code is single-lined but has return keyword, the '{}' are mandatory
+      let myFunction3 = () => {
+        return "Hello";
+      };
+      //   myFunction3();
+
+      console.log(myFunction3());
+    </script>
+  </body>
+</html>

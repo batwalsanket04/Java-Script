@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    
+    Component of a function
+
+    1. Parameter: It the idea that we give to the function in form of variables 
+                  which will be used for performing desired operation.
+
+
+    2. Arguments: This is the actual data that we pass in function call and which 
+                  is used in paramters to perform the given operation
+    
+    -->
+    <script>
+      let n1 = +prompt("Enter first number");
+      let n2 = +prompt("Enter second number");
+
+      //   let n1 = 50;
+      //   let n2 = 60;
+
+      let nm1 = +prompt("Enter another first number");
+      let nm2 = +prompt("Enter another second number");
+
+      //   function add() {
+      //     console.log(n1 + n2);
+      //   }
+
+      function add(num1, num2) {
+        console.log(num1 + num2); //45      151
+      }
+
+      //   add(30, 49);   //Hardcoded arguments
+
+      add(n1, n2); //Dynamic variable allocation/reference
+
+      console.log("*******************************");
+      //   We can use the same function to work with multiple variable values due to arguments
+      add(nm1, nm2);
+    </script>
+  </body>
+</html>

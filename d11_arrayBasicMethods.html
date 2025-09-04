@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    
+    Basic methods is array
+
+
+    length: It returns the no of elements in the array
+
+    push: It adds a new element at the end of the array
+          It returns the modified length of the array
+
+    pop: It removes one element from the end of the array
+         It returns the removed element from the end of the array
+
+    unshift: It adds an element to the beginning of the array
+             It returns the new length of the array after adding a new element in the beginning
+             
+
+    shift: It removes one element from the beginning of the array.
+           It returns the element which was removed from the beginning of the array
+
+
+    splice:
+
+
+    splice(starting_index, no_of_elements): It removes the given no of element from the starting index
+
+    splice(starting_index, no_of_elements, replacement_elements): 
+                            It removes the given no of elements from the starting index 
+                            and keeps the replacement elements in that place
+
+    splice(starting_index, 0, replacement_elements): It does not remove any elements from the array but it 
+                            keeps the replacement elements in the given starting index
+    
+    -->
+    <script>
+      let arr1 = [10, 40, 61, 82, 9, 97, 5, 16];
+      console.log(arr1);
+
+      console.log(arr1.length);
+
+      for (let i = 0; i < arr1.length; i++) {
+        document.write(`<h3>${arr1[i]}</h3>`);
+      }
+
+      console.log(arr1.push(99));
+      console.log(arr1);
+
+      //   arr1.pop();
+      console.log(arr1.pop());
+      console.log(arr1);
+
+      //   arr1.unshift(101);
+      console.log(arr1.unshift(101));
+      console.log(arr1);
+
+      //   arr1.shift();
+      console.log(arr1.shift());
+      console.log(arr1);
+
+      console.log("*************************");
+
+      //   arr1.splice(2, 3);
+
+      //   arr1.splice(2, 3, 101, 111, 121);
+
+      arr1.splice(2, 0, 123, 345, 567);
+      console.log(arr1);
+    </script>
+  </body>
+</html>

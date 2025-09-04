@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let myObj1 = {
+        name: "Rutvij",
+        role: "Trainer",
+        phone: 8767808303,
+        email: "rutvijm97@gmail.com",
+        location: "Satara",
+        bikeDetails: {
+          make: "Bajaj",
+          model: "PulsarNS160",
+          Engine: "160cc",
+        },
+      };
+
+      console.log(myObj1);
+
+      /*  Key referencing
+        This is used when we directly want to access the key from any object.
+        In this, the key is referred using the '.'
+
+      */
+      //   myObj1.location = "Pune";
+      //   console.log(myObj1);
+
+      //   let userKey = prompt("Enter the data you want to change"); //location
+      //   let newData = prompt("Enter the updated value"); //Pune
+
+      /*   Variable referencing
+            This is used when we have the name of key stored in a variable and we need to
+            use that variable to access the obejct key
+            For this, we write the variable in '[var_name]' to find the key within the object.
+
+      */
+      //   myObj1[userKey] = newData;
+      //   console.log(myObj1);
+
+      // ***********************************************************************************************
+      //   Reading the object
+
+      //   document.write(myObj1);  //This is give wrong output.
+
+      //   Writing individual keys: Not a great way to work!
+      //   document.write(`Name: ${myObj1.name}<br/>`);
+      //   document.write(`Role: ${myObj1.role}<br/>`);
+      //   document.write(`Phone: ${myObj1.phone}<br/>`);
+      //   document.write(`Email: ${myObj1.email}<br/>`);
+      //   document.write(`Location: ${myObj1.location}<br/>`);
+
+      //   Iterating the object using for in loop
+
+      for (let keys in myObj1) {
+        document.write(`<h2>${keys}:${myObj1[keys]}</h2>`);
+      }
+
+      for (let keys in myObj1.bikeDetails) {
+        document.write(`<h2>${keys}: ${myObj1.bikeDetails[keys]}</h2>`);
+      }
+    </script>
+  </body>
+</html>

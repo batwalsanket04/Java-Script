@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!-- way to diplay the string and variables together in js
+
+ 1.use of multiple document.write():-Becouse this approach ,we need to write the multiple line of code just to get
+                                     a  simple output with multiple variables in it.
+                                    -simple output with multiple variable.
+
+
+ 2.use of concatination symbol(+):- thois method helps to write our output in single line but in this we need ton use multiple inverted Quates and Quancatination operator 
+                                   -Even if we miss any quates or operator our entire output can go wrong.
+
+ 3.template literal:- It is the feature of modern Java script (ES6) to writes output.
+                    -if we works concatination operator we can finds problem while using single quates and double quates 
+                    -also we need to  pay proper attention  to use the concatination operator for writting variables
+                    -by using template litaral all of the above problem aare solved using the (``)(bluctick) symbol.
+                    -the  output that we want to display is written in these backtick symbol and the variable are written int the ($var_name)
+                    -also we can easily write the quates symbol inside the backticks 
+                    -the template literal makes our job of writing symbol and varible make much easiar.
+                    
+                
+                                   -->
+
+    <script>
+
+       let name=prompt("enter yor name");
+       let age= +prompt("enter your age");
+       
+    document.write("<h1> hello");
+    document.write(name);
+    document.write("! Good Morning! <br>");
+    document.write("yoyr are ");
+    document.write(age);
+
+    document.write("years old. </h1>");
+
+
+// concatenation operator
+
+    document.write(
+        "<h1> Hello " + name +"  you are " + age +"  years old</h1>"
+    )
+
+// template literal
+
+let a = 10, b = 20;
+console.log(`Sum is ${a + b}`);  // Output: Sum is 30
+
+
+    </script>
+</body>
+</html>

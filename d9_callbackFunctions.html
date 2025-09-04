@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    
+    Callback function:
+
+    It is a function which is passed as an argument to another function.
+    This callback function is executed inside the main function and its output is then used in the main function.
+
+    It is a type of asynchronous behaviour
+    
+    -->
+    <script>
+      // the average function created below will always calcualte the average of 5 numbers only.
+      // If we give 3 nos. or 7 numbers, still we would get the wrong output.
+
+      //   function average(n1, n2, n3, n4, n5) {
+      //     let sum = n1 + n2 + n3 + n4 + n5;
+      //     let avg = sum / 5;
+      //     console.log(`The average is ${avg}`);
+      //   }
+
+      //   average(10, 20, 30, 40, 50);
+
+      //   average(10, 20, 30);
+
+      //   average(10, 20, 30, 40, 50, 60, 70);
+
+      //   Solving this issue using callback function
+
+      function average(callFunc, count) {
+        let sum = callFunc();
+        let avg = sum / count;
+        console.log(`The average of ${count} numbers is ${avg}`);
+      }
+
+      function addThree() {
+        let n1 = +prompt("Enter first number");
+        let n2 = +prompt("Enter second number");
+        let n3 = +prompt("Enter third number");
+
+        let sum3 = n1 + n2 + n3;
+
+        return sum3;
+      }
+
+      function addFive() {
+        let n1 = +prompt("Enter first number");
+        let n2 = +prompt("Enter second number");
+        let n3 = +prompt("Enter third number");
+        let n4 = +prompt("Enter fourth number");
+        let n5 = +prompt("Enter fifth number");
+
+        let sum5 = n1 + n2 + n3 + n4 + n5;
+
+        return sum5;
+      }
+      function addSeven() {
+        let n1 = +prompt("Enter first number");
+        let n2 = +prompt("Enter second number");
+        let n3 = +prompt("Enter third number");
+        let n4 = +prompt("Enter fourth number");
+        let n5 = +prompt("Enter fifth number");
+        let n6 = +prompt("Enter sixth number");
+        let n7 = +prompt("Enter seventh number");
+
+        let sum7 = n1 + n2 + n3 + n4 + n5 + n6 + n7;
+
+        return sum7;
+      }
+
+      //   average(addThree, 3);
+      //   average(addFive, 5);
+      //   average(addSeven, 7);
+
+      /*
+
+      Practical use of callback function
+
+      The SetInterval is the same function is both cases, but it is giving different output everytime because it is using different 
+      callback functions.
+
+
+      function greet() {
+        console.log("Hello!");
+      }
+
+      setInterval(greet, 2000);
+
+      function hello() {
+        console.log("Good morning!");
+      }
+
+      setInterval(hello, 1000);
+
+      */
+
+      //   Arrow function as a callback function
+
+      setInterval(() => {
+        console.log("Hello from arrow function");
+      }, 2000);
+
+      //   Anonymous function as callback
+
+      average(function () {
+        let n1 = +prompt("Enter first number");
+        let n2 = +prompt("Enter second number");
+        let n3 = +prompt("Enter third number");
+        let n4 = +prompt("Enter fourth number");
+
+        return n1 + n2 + n3 + n4;
+      }, 4);
+    </script>
+  </body>
+</html>

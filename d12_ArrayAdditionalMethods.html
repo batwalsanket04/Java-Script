@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    
+    Array additional methods
+
+    indexOf(): This method returns the index position of the first occurenace of the element.
+
+    lastIndexOf(): This method returns the index position of the last occurence of the element.
+    
+    Array.isArray(): This method check whether the object passed is actually an object or an array.
+
+    includes(): This method checkn sfor the presence of the given element within the array.
+
+    fill(): THis method replaces the array elements with the static data(The data is constant).
+            It modifies the original array
+
+    slice(starting_index, ending_index): This method extracts a portion of our array and returns it. 
+            It does not modify the original array
+            It supports negative values
+
+    reverse(): This method reverses the array and it modifies the original array.
+
+    sort(): This method arranges our array elements in alphabetical or numerical order.
+
+    toString(): This method converts the array into a string.
+                It is a universal method, i.e. it is applicable for all datatypes.
+
+    join(seperatorCharacter): This method joins all the elements of array together 
+                using the provided seperator character. It coverts the output to a string.
+
+
+    concat(): It joins together arrays.
+
+    flat(): It merges the nested array within an array in to the main array.
+
+    valueOf(): It is used to return the as it is value of the given array.
+
+    from(): It converts a string into an array
+
+    filter(callback): This method uses a callback function to check the elements and return only 
+                      those elements which match the given condition.
+
+                      This method filters the array elements as per the given codition.
+
+    some(callback): THis method uses a callback function to check every element with a condition. If 
+                    any of elements matches the condition it returns true.
+                    This method returns false only when none of the elements matches the condition.
+
+
+    every(callback): This method uses a callback to check whether all the elements match the condition.
+                        It will return true only when all the elements are matching the condition.
+                        If a single element does not match the condition, the answer will be false.
+
+
+    reduce(callback): This method uses a callback function to process eacch and every element from the 
+                    array and return a single value
+
+
+IQ: What is the difference between slice and splice?
+    Slice       
+        1. It extracts a portion of array 
+        2. It takes starting index and ending index as arguments
+        3. It does not modify the original array
+
+
+    Splice
+        1. It replaces, removes or adds the elements into the array
+        2. It takes starting index, no of elements and replacement elements as arguments
+        3. It modifies the original array
+
+
+    -->
+
+    <script>
+      let obj1 = {
+        make: "Realme",
+        model: "X7 Max 5G",
+        ram: "8GB",
+        storage: "128GB",
+      };
+      let arr1 = [11, 22, 33, 44, 55, 66, 77, 88, 99, 55, 50];
+      let arr2 = [10, 20, 30, 40];
+      let arr3 = [35, 22, 18, 25, 115, 29, 31, 7, 42, 21, 10];
+      let myStr = "Rutvij";
+      let nestedArr = [1, 2, 3, ["Four", "Five"], 6, 7, 8];
+
+      let arr602 = [
+        "yash",
+        "viraj",
+        "swapnil",
+        "nikhil",
+        "rashtrapal",
+        "aman",
+        "mitesh",
+        "soham",
+        "mayur",
+        "sanket",
+      ];
+
+      //   Copying the array
+      let safeArr = new Array();
+      for (let js = 0; js < arr2.length; js++) {
+        safeArr[js] = arr2[js];
+      }
+      console.log(arr1.indexOf(55)); //4
+      console.log(arr1.lastIndexOf(55)); //9
+
+      console.log(typeof obj1);
+      console.log(typeof arr1);
+
+      console.log(Array.isArray(obj1));
+      console.log(Array.isArray(arr1));
+
+      console.log(arr1.includes(66));
+      console.log(arr1.includes(166));
+
+      //   console.log(arr2);
+      //   console.log(arr2.fill("Javascript"));      OP: ["Javascript","Javascript","Javascript","Javascript"]
+      //   console.log(arr2.fill("Javascript", 1, 2));  OP: [10,"Javascript", 30,40]
+
+      //   console.log(safeArr);
+      console.log(arr1);
+      console.log(arr1.slice(2, 6));
+      console.log(arr1);
+
+      console.log(arr2);
+      console.log(arr2.reverse());
+      console.log(arr602);
+      console.log(arr602.sort());
+      console.log(arr3);
+      //   console.log(arr3.sort());  By this method, even our nubers are sorted in alphabetical manner
+      console.log(
+        arr3.sort((a, b) => {
+          //   return a - b;    //Ascending order (small -> large)
+          return b - a; //Descending (large -> small)
+        })
+      );
+
+      let arrStr = arr2.toString();
+      //   let num1 = 23451;
+      //   let numStr = num1.toString();
+      //   console.log(num1);
+
+      //   let bool1 = true;
+      //   let bStr = bool1.toString();
+      //   console.log(`${bStr} is of type ${typeof bStr} `);
+      //   console.log(`${numStr} is of type ${typeof numStr} `);
+      console.log(`${arrStr} is of type ${typeof arrStr} `);
+
+      console.log(arr2);
+      console.log(arr2.join("#"));
+      console.log(arr2);
+
+      console.log(arr2.concat(arr602));
+
+      console.log(nestedArr.flat());
+
+      console.log(arr1.valueOf());
+
+      let strArr = Array.from(myStr);
+      console.log(strArr);
+
+      console.log(
+        //   The below code will return only those elements which are divisible by 3
+        // arr1.filter((ele) => {
+        //   if (ele % 3 == 0) {
+        //     return ele;
+        //   }
+        // })
+
+        // The below code will return elements of array while ignoring the value 55
+        arr1.filter((ele) => {
+          return ele != 55;
+        })
+      );
+
+      console.log(arr3);
+
+      console.log(
+        arr3.some((ele) => {
+          //   return ele < 10;   //one element matched -> true
+          //   return ele < 30; //5 elements matched -> true
+          //   return ele > 100;  //1 element matched -> true
+          return ele > 500; //0 elements matched -> false
+        })
+      );
+
+      console.log(
+        arr3.every((ele) => {
+          //   return ele < 500;      //all elements match -> true
+          //   return ele > 5;          //all elements match -> true
+          return ele > 10; //1 element does not match -> false
+        })
+      );
+
+      console.log(
+        arr1.reduce((e1, e2) => {
+          return e1 + e2;
+        })
+      );
+    </script>
+  </body>
+</html>
