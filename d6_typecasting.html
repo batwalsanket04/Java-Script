@@ -1,73 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <!-- Typecasting
-
-    it is the process of converting from one form into another .
-    it is required so that we can use data appropriatly.
-
+  </head>
+  <body>
+    <!-- 
     
-    1.Modifying with prompt:-
-     - we add the "+" as prefix to the prompt method .it convert the data in prompt to a number.
-     -prompt gives a string by defoult.
+    Typecasting
+
+    It is the process of converting the datatype from one form into another.
+    It is required so that we can use the data appropriately.
 
 
-    2.Number();
-     -this method helps to us convert our string into number including the decimal value becouse of this method .we can converts the decimal string into decimal decimal string.
+    1. Modifying the prompt: We add the '+' as prefix to the prompt method. It converts the data in prompt 
+                             to a number. Prompt gives a string by default.
 
-    3.ParseInt();
-    -this method helps to convert our string into a number while igniring decimal values.
-    -the methods stop the conversion of the string as soon as it finds any non-numeric character.
- -->
+    2. Number(): This method helps us to convert our string into a number including the decimal values.
+                 Because of this method, we can convert the decimal strings into decimal numbers.
 
-
-
-
+    3. parseInt(): This method helps us to convert our string into a number while ignoring the decimal values.
+                   This method stops the conversion of the string as soon as it finds any non-numeric character.
+    
+    IQ: Explain the difference between Number() and parseInt()
+    -->
     <script>
- 
- let num1= +prompt("Enter the first number");
- let num2= +prompt("enter The second number");
+      //   let num1 = 55;
+      //   let num2 = 44;
 
- console.log( num1+ " is of type " + typeof num1);
- console.log( num2+ " is of type " + typeof num2);
+      let num1 = prompt("Enter first number");
+      let num2 = prompt("Enter second number");
 
+      console.log(num1 + "  is of type " + typeof num1);
+      console.log(num2 + "  is of type " + typeof num2);
 
- //Number
-
- let mynum1=number(num1);
- let mynum2=number(num2);
-
- console.log(mynum1 + " is of type "  +typeof mynum1);
- console.log(mynum2 + " is of type "  +typeof mynum2);
-
- console.log(mynum1+mynum2);
-
-
- //ParseInt()
-
-
- let my1=parseInt(num1);
- let my2=parseInt(num2);
-
- console.log(my1 + " is of type "  +typeof my1);
- console.log(my2 + " is of type "  +typeof my2);
-
- console.log(my1+my2);//gives us approximate value as output.
- 
+      //   Number()
+        // let myNum1 = Number(num1);//
+        // let myNum2 = Number(num2);
+         //console.log(myNum1 + myNum2);//
 
 
 
+      //   parseInt()
 
+      let myNum1 = parseInt(num1);
+      let myNum2 = parseInt(num2);
 
+      console.log(myNum1 + " is of type " + typeof myNum1);
+      console.log(myNum2 + " is of type " + typeof myNum2);
 
-
-
-
+      console.log(myNum1 + myNum2);//
     </script>
-</body>
+  </body>
 </html>
