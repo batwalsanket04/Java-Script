@@ -46,6 +46,23 @@
     console.log(Arr1.length);
 
 
+    
+
+ //removes the given number of elements from tbhe starting index
+Arr1.splice(1,3)
+    console.log(Arr1)
+
+
+// remove the element from the given index and keep replace the element in that place.
+Arr1.splice(1,3,40,40,40)
+console.log(Arr1)
+
+
+// it doesnt remove the any element from the array but keeps it keeps the replace ment element in that array
+Arr1.splice(1,0,20,20,20,20,)
+console.log(Arr1)
+
+
     for(let i=0;i<Arr1.length;i++)
 {
     document.write(`<h3>${Arr1[i]}</h3>`);
